@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo sed -e '$d' /etc/default/cpufrequtils
+sudo sed -i '$a GOVERNOR="performance"' /etc/default/cpufrequtils
+sudo /etc/init.d/cpufrequtils restart
+cpufreq-info

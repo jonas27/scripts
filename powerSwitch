@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /home/joe/scripts/
+on_ac_power
+if [ "$?" -eq "0" ]; then 
+#    sudo /home/joe/scripts/highPower.sh
+else
+    sudo /home/joe/scripts/lowPower.sh
+fi
+
+# Add cron job via sudo crontab -e
+# * * * * * $HOME/scripts/powerSwitch.sh
