@@ -12,6 +12,10 @@ sudo sed -i '$a cgroup_enable=cpuset cgroup_enable=memory' /boot/cmdline.txt
 # Install docker
 curl -s https://download.docker.com/linux/raspbian/gpg | sudo apt-key add -
 echo "deb [arch=armhf] https://download.docker.com/linux/raspbian stretch edge" | sudo tee /etc/apt/sources.list.d/socker.list
+sudo apt-get update -q
+sudo apt-get install -y docker-ce=18.06.0~ce~3-0~raspbian --allow-downgrades
+echo "docker-ce hold" | sudo dpkg --set-selections
+sudo usermod pi -aG docker
 
 # Install kubeadm
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
