@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fixes some issues concerning local variables and cgroups
-add export LC_ALL=C to ~/.bashrc
+export LC_ALL=C
 
 # Turn swap off
 sudo dphys-swapfile swapoff && sudo dphys-swapfile uninstall && sudo update-rc.d dphys-swapfile remove
