@@ -7,7 +7,7 @@ export LC_ALL=C
 sudo dphys-swapfile swapoff && sudo dphys-swapfile uninstall && sudo update-rc.d dphys-swapfile remove
 
 # give all cgroups access to cpuset and memory. Important for K3s
-sed -i '$a cgroup_enable=cpuset cgroup_enable=memory' /boot/cmdline.txt
+sudo sed -i '$a cgroup_enable=cpuset cgroup_enable=memory' /boot/cmdline.txt
 
 # Install docker
 curl -s https://download.docker.com/linux/raspbian/gpg | sudo apt-key add -
