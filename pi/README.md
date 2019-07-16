@@ -1,0 +1,6 @@
+
+
+## Login Internet 
+To log in, on a headless device log in with the browser, record the network traffic while doing so, but stop before the new page loads. Then copy the inet.php package to cURL should look like below and just use cURL in terminal. You are now logged in.
+
+curl 'http://net.gjk.dk/netadmin/inet.php' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' -H 'Origin: http://net.gjk.dk' -H 'Upgrade-Insecure-Requests: 1' -H 'DNT: 1' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'Referer: http://net.gjk.dk/netadmin/inet.php' -H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: en-US,en;q=0.9,da-DK;q=0.8,da;q=0.7,de;q=0.6'; --data 'state=login&login=<username>&passwd=<password>&store_passwd=1' --compressed --insecure ;
