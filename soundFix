@@ -1,3 +1,4 @@
 #!/bin/bash
-amixer -c 0 set 'Headphone Mic Boost',0 1
+#amixer -c 0 set 'Headphone Mic Boost',0 1
+amixer -c 0 set 'Headphone',0 1
 
